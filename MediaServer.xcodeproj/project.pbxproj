@@ -14,6 +14,8 @@
 		31ED907A1A8B524B002F8A89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ED90791A8B524B002F8A89 /* Images.xcassets */; };
 		31ED907D1A8B524B002F8A89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31ED907B1A8B524B002F8A89 /* LaunchScreen.xib */; };
 		31ED90891A8B524B002F8A89 /* MediaServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ED90881A8B524B002F8A89 /* MediaServerTests.m */; };
+		31ED90991A8B52F4002F8A89 /* MediaServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31ED90981A8B52F4002F8A89 /* MediaServer.mm */; };
+		31ED915D1A8B5AE5002F8A89 /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ED915C1A8B5AE5002F8A89 /* Platinum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		31ED90821A8B524B002F8A89 /* MediaServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ED90871A8B524B002F8A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31ED90881A8B524B002F8A89 /* MediaServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaServerTests.m; sourceTree = "<group>"; };
+		31ED90971A8B52F4002F8A89 /* MediaServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaServer.h; sourceTree = "<group>"; };
+		31ED90981A8B52F4002F8A89 /* MediaServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaServer.mm; sourceTree = "<group>"; };
+		31ED915C1A8B5AE5002F8A89 /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31ED915D1A8B5AE5002F8A89 /* Platinum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,9 @@
 		31ED90601A8B524B002F8A89 = {
 			isa = PBXGroup;
 			children = (
+				31ED915C1A8B5AE5002F8A89 /* Platinum.framework */,
+				31ED90971A8B52F4002F8A89 /* MediaServer.h */,
+				31ED90981A8B52F4002F8A89 /* MediaServer.mm */,
 				31ED906B1A8B524B002F8A89 /* MediaServer */,
 				31ED90851A8B524B002F8A89 /* MediaServerTests */,
 				31ED906A1A8B524B002F8A89 /* Products */,
@@ -222,6 +231,7 @@
 				31ED90751A8B524B002F8A89 /* ViewController.m in Sources */,
 				31ED90721A8B524B002F8A89 /* AppDelegate.m in Sources */,
 				31ED906F1A8B524B002F8A89 /* main.m in Sources */,
+				31ED90991A8B52F4002F8A89 /* MediaServer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,20 +354,48 @@
 		31ED908D1A8B524C002F8A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/rdqa/develop/iOS/PlatinumKit-1-0-5-13_0ab854/Platinum/Targets/universal-apple-ios/Release",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MediaServer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
 		31ED908E1A8B524C002F8A89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/rdqa/develop/iOS/PlatinumKit-1-0-5-13_0ab854/Platinum/Targets/universal-apple-ios/Release",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MediaServer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MediaServer.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    MediaServer *server = [[MediaServer alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
